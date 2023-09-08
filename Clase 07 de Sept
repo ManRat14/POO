@@ -1,0 +1,6 @@
+Obj1 = True
+Obj2 = True
+Obj3= False
+Maquina = "x"
+Maquina = Obj1 and (Obj2 or Obj3)
+print(Maquina)
