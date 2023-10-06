@@ -1,0 +1,38 @@
+#Grupo_Manuel Rátiva
+
+a = 0
+b=4.5
+c = 9.5
+
+g=b-c
+
+print(g)
+
+f=a-c
+
+print (f)
+
+#p=input("Hola, ingresa valor 1: ")
+#q=input("Ingresa valor 2: ")
+
+dato_1=int(input("Hola, ingresa el valor 1: "))
+dato_2=int(input("Ahora, ingresa el valor 2: "))
+
+#condición 
+if dato_2==0:
+    print("Dato invalido")
+    dato_2=int(input("Ingrese el valor de nuevo: "))
+else:    
+    pass
+
+
+resta=dato_1-dato_2
+suma=dato_1+dato_2
+divi=dato_1/dato_2
+multi=dato_1*dato_2
+
+print(f"el resultado de la resta es: ",resta)
+print(f"el resultado de la suma es: {suma} ")
+print(f"el resultado de la división es: {divi} ")
+print(f"el resultado de la multiplicación es: {multi} ")
+
