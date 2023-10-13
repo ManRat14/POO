@@ -1,0 +1,53 @@
+'''
+
+Ejercicio de temperatura 
+Condicionales 
+Manuel Rátiva 
+
+T<T1= A1=off // A2=off
+T1<T<T2 = A1=ON // A2=off
+T>T2 = A1=off // A2=ON
+
+
+
+'''
+
+aire_1: False
+aire_2: False
+
+temp_min= int(input("Temperatura mínima deseada: "))
+temp_max= int(input("Temperatura máxima deseada: "))
+
+temp_room= int(input("La temperatura del cuarto es: "))
+
+while temp_room < temp_min:
+    aire_1=False
+    aire_2=False
+    print("Aire 1 y Aire 2: Apagados")
+    temp_room= int(input("La temperatura del cuarto es: "))
+    while temp_room < temp_max and temp_room > temp_min:
+        aire_1=True
+        aire_2=False
+        print("Aire 1: Encendido: - Aire 2: Apagado")
+        temp_room= int(input("La temperatura del cuarto es: "))
+
+    while temp_room > temp_max:
+        aire_1=False
+        aire_2=True
+        print("Aire 1: Apagado - Aire 2: Encendido")
+         temp_room= int(input("La temperatura del cuarto es: "))
+
+
+
+while temp_room < temp_max and temp_room > temp_min:
+    aire_1=True
+    aire_2=False
+    print("Aire 1: Encendido: - Aire 2: Apagado")
+    temp_room= int(input("La temperatura del cuarto es: "))
+
+while temp_room > temp_max:
+    aire_1=False
+    aire_2=True
+    print("Aire 1: Apagado - Aire 2: Encendido")
+    temp_room= int(input("La temperatura del cuarto es: "))
+
