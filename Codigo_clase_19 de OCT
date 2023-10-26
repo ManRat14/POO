@@ -1,0 +1,56 @@
+Temp_min=0
+Temp_max=0
+Error_temp=0
+def Sistema_on():
+    Temp_actual= int(input("Ingrese la temperatura del cuarto: "))
+    if(Temp_actual< Temp_min):
+        print(f"La temperatura en el cuarto es: {Temp_actual}°C")
+        print("Modulo 1 y Modulo 2 apagados")
+    elif(Temp_actual>=Temp_min and Temp_actual<Temp_max):
+        print(f"La temperatura en el cuarto es: {Temp_actual}°C")
+        print("Modulo 1 encendido y Modulo 2 apagado")        
+    elif(Temp_actual>Temp_max):
+        print(f"La temperatura en el cuarto es: {Temp_actual}°C")
+        print("Modulo 1 apagado y Modulo 2 encendido")   
+Menu = """
+1-Configurar Temperaturas
+2-Encender Sistema
+3-Sistema en Modo de Reposo
+4-Apagar Sistema
+"""
+print("¿Qué desea hacer?: ")
+print(Menu)
+Estado = int(input("Indique el numero de opcion del menu: "))
+while(Estado!=4):
+    if(Estado==1):
+        print("Configuracion de Temperaturas:")
+        print(" ")
+        Temp_min=int(input("Indique el valor minimo de temperatura: "))
+        Temp_max=int(input("indique el valor maximo de temperatura:"))
+        if(Temp_min<Temp_max):
+            Error_temp=0
+        else:
+            Error_temp=1
+    if(Estado==2):
+        if(Temp_min<Temp_max):
+            Sistema_on()
+        else:
+            Error_temp = 1
+    if(Estado==3):
+        print("El sistema se encuentra en modo de reposo")
+    if(Estado!=2):
+        print("¿Qué desea hacer?: ")
+        print(Menu)
+        Estado = int(input("Indique el numero de opcion del menu: "))
+    elif(Estado==2 and Error_temp==1):
+        Estado = 1
+    else:  
+        Mantener_on=input("¿Desea mantener el sistema encendido? ")
+        if(Mantener_on=="si"):
+            Estado = 2
+        else:
+          Estado = 3
+while(Estado==4):
+    print("Sistema apagado")
+    print("Reinicie el algortimo para encender nuevamente")
+    break
