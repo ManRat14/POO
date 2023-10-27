@@ -1,0 +1,54 @@
+#Parcial 2 Manuel Rátiva
+#Calculo de rectas
+
+#NoFuncionando:
+
+operacion=input("Desea realizar la parametrización de la recta? 1 - SI // 2 - NO -> ")
+def parametros():
+    x1a=float(input("Ingrese coordenada X1 de recta a: "))
+    y1a=float(input("Ingrese coordenada Y1 de recta a: "))
+    x2a=float(input("Ingrese coordenada X2 de recta a: "))
+    y2a=float(input("Ingrese coordenada Y2 de recta a: "))
+    x1b=float(input("Ingrese coordenada X1 de recta b: "))
+    y1b=float(input("Ingrese coordenada Y1 de recta b: "))
+    x2b=float(input("Ingrese coordenada X2 de recta b: "))
+    y2b=float(input("Ingrese coordenada Y2 de recta b: "))
+    ma=(y_1_a-y2a)/(x1a-x2a)
+    mb=(y1b-y2b)/(x1b-x2b)
+    
+while (operacion=="1"):
+    parametros()
+    print(ma,mb)
+    if (ma==mb): 
+        print("Las rectas son paralelas.")
+    elif (ma*mb==-1):
+        print("La recta es1 perpendicular.")
+    elif (ma!=mb and ma*mb!=-1):
+        print("No son paralelas ni perpendiculares.")
+        
+        
+
+
+#Funcionado:
+
+
+operacion=input("Desea realizar la parametrización de la recta? 1 - SI // 2 - NO -> ")
+  
+while (operacion=="1"):
+    x1a=float(input("Ingrese coordenada X1 de recta a: "))
+    y1a=float(input("Ingrese coordenada Y1 de recta a: "))
+    x2a=float(input("Ingrese coordenada X2 de recta a: "))
+    y2a=float(input("Ingrese coordenada Y2 de recta a: "))
+    x1b=float(input("Ingrese coordenada X1 de recta b: "))
+    y1b=float(input("Ingrese coordenada Y1 de recta b: "))
+    x2b=float(input("Ingrese coordenada X2 de recta b: "))
+    y2b=float(input("Ingrese coordenada Y2 de recta b: "))
+    ma=((y1a-y2a)/(x1a-x2a))
+    mb=((y1b-y2b)/(x1b-x2b))
+    print(ma,mb)
+    if (ma==mb): 
+        print("Las rectas son paralelas.")
+    elif (ma*mb==-1):
+        print("La recta es perpendicular.")
+    elif (ma!=mb and ma*mb!=-1):
+        print("No son paralelas ni perpendiculares.")
